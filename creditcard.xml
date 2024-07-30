@@ -1,34 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?>
-<extension version="3.1" type="plugin" group="gurupayment" method="upgrade">
-    <name>Credit Card</name>
-    <author>Author</author>
-    <authorEmail></authorEmail>
-    <authorUrl></authorUrl>
-    <creationDate>July 12, 2024</creationDate>
-    <copyright></copyright>
-    <version>1.0.0</version>
-    <description>PLG_GURU_CUSTOM_PAYMENT_DESCRIPTION</description>
-
-    <files>
-        <filename plugin="creditcard">creditcard.php</filename>
-        <folder>language</folder>   
-        <filename>creditcard-logo.png</filename>
-    </files>
-
-    <languages>
-        <language tag="en-GB">language/en-GB/plg_gurupayment_creditcard.ini</language>
-        <language tag="en-GB">language/en-GB/plg_gurupayment_creditcard.sys.ini</language>
-        <language tag="pt-PT">language/pt-PT/plg_gurupayment_creditcard.ini</language>
-        <language tag="pt-PT">language/pt-PT/plg_gurupayment_creditcard.sys.ini</language>
-    </languages>
-
-    <config>
-        <fields name="params" addfieldpath="/plugins/gurupayment/creditcard/fields">
-            <fieldset name="basic">
-                <field name="creditcard_label" type="text" default="Credit Card" label="PLG_CREDITCARD_NAME" description="" />
-                <field name="creditcard_key" type="text" label="PLG_CREDITCARD_KEY" description="PLG_CREDITCARD_KEY_DESC" />
-		<field name="creditcard_errorUrl" type="text" label="PLG_CREDITCARD_ERROR_URL" description="PLG_CREDITCARD_ERROR_URL_DESC" />
-            </fieldset>
-        </fields>
-    </config>
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension version="3.1" type="plugin" group="gurupayment" method="upgrade">
+
+    <name>Credit Card</name>
+
+    <author>Shivam Thakur</author>
+
+    <authorEmail>shivamkathyala@gmail.com</authorEmail>
+
+    <authorUrl></authorUrl>
+
+    <creationDate>July 12, 2024</creationDate>
+
+    <copyright>Open Source</copyright>
+
+    <version>1.0.0</version>
+
+    <description>PLG_GURU_CUSTOM_PAYMENT_DESCRIPTION</description>
+
+
+
+    <files>
+
+        <filename plugin="creditcard">creditcard.php</filename>
+
+        <folder>language</folder>   
+
+        <filename>creditcard-logo.png</filename>
+
+    </files>
+
+
+
+    <languages>
+
+        <language tag="en-GB">language/en-GB/plg_gurupayment_creditcard.ini</language>
+
+        <language tag="en-GB">language/en-GB/plg_gurupayment_creditcard.sys.ini</language>
+
+        <language tag="pt-PT">language/pt-PT/plg_gurupayment_creditcard.ini</language>
+
+        <language tag="pt-PT">language/pt-PT/plg_gurupayment_creditcard.sys.ini</language>
+
+    </languages>
+
+
+
+    <config>
+
+        <fields name="params" addfieldpath="/plugins/gurupayment/creditcard/fields">
+
+            <fieldset name="basic">
+
+                <field name="creditcard_label" type="text" default="Credit Card" label="PLG_CREDITCARD_NAME" description="" />
+
+                <field name="creditcard_key" type="text" label="PLG_CREDITCARD_KEY" description="PLG_CREDITCARD_KEY_DESC" />
+
+		<field name="creditcard_errorUrl" type="text" label="PLG_CREDITCARD_ERROR_URL" description="PLG_CREDITCARD_ERROR_URL_DESC" />
+
+            </fieldset>
+
+        </fields>
+
+    </config>
+
 </extension>
