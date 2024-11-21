@@ -153,12 +153,26 @@ class plgGuruPaymentCreditCard extends CMSPlugin
         $primaryLanguage = substr($currentLanguage, 0, 2);
 
         //Factory::getApplication()->enqueueMessage($primaryLanguage, 'error');
+        //Factory::getApplication()->enqueueMessage($currentLanguage, 'error');
 
         $params = new Registry($post['params']);
 
         $CCARD_KEY = $params->get('creditcard_key');
 
-        $errorPageUrl = $params->get('creditcard_errorUrl');
+        // Pt lng url
+        $errorPageUrlPT = $params->get('creditcard_errorUrlpt-PT');
+        // En lng url
+        $errorPageUrlEN = $params->get('creditcard_errorUrlen-GB');
+
+        if( $currentLanguage === "pt-PT"){
+            $errorPageUrl = $errorPageUrlPT;
+        }
+
+        if( $currentLanguage === "en-GB"){
+            $errorPageUrl = $errorPageUrlEN;
+        }
+
+        
 
         
 
@@ -213,6 +227,8 @@ class plgGuruPaymentCreditCard extends CMSPlugin
         $cart_page_url = JURI::base() . 'gurubuy';
 
         // Factory::getApplication()->enqueueMessage("<pre>" . $callback_url . "</pre>", 'error');
+        // Factory::getApplication()->enqueueMessage("<pre>" . $callback_url . "</pre>", 'error');
+        //Factory::getApplication()->enqueueMessage("<pre>" . $errorPageUrl . "</pre>", 'error');
 
         // Factory::getApplication()->enqueueMessage("<pre>" . $cart_page_url . "</pre>", 'error');
 
@@ -242,6 +258,7 @@ class plgGuruPaymentCreditCard extends CMSPlugin
 
         //Factory::getApplication()->enqueueMessage("<pre>" . $amount . "</pre>", 'error');
 
+        
         
 
         // API REQUEST
